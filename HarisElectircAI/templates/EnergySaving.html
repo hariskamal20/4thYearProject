@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style>
+.footer {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  overflow: visible;
+  color:#FFFFFF;
+  font-weight: bold;
+  height: 2rem;
+  background-color:#000000;
+}	
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>*** Haris Electrical AI ***</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">*** Haris Electrical AI ***</a>
+    </div>
+   <ul class="nav navbar-nav">
+    <li class="active"><a href="{{ url_for('MainApplicaion') }}">Home</a></li>
+      <li ><a href="{{ url_for('YourOwnConsumption') }}">Your Area Consumption<span class="caret"></span></a></li>
+	   <li><a href="{{ url_for('YourAppliances') }}">Your Appliances Consupmtion <span class="caret"></span></a></li>
+	     <li><a href="{{ url_for('timeSeriesAnalysis') }}">TimeSeries Analysis <span class="caret"></span></a></li>
+		 <li><a href="{{ url_for('EnergySaving') }}">Energy Saving <span class="caret"></span></a></li>
+		 <li><a href="{{ url_for('CheckYourStatus') }}">Check Your Status <span class="caret"></span></a></li>
+		 <li><a href="{{ url_for('publicDataAnalysis') }}">Report <span class="caret"></span></a></li>
+    </ul>
+        
+    
+  </div>
+</nav>
+
+<div align="center"><img src="../static/banner.jpg"   class="img-responsive"  /></div>
+          
+    <div class="container">
+ <form action = "/EnergySaving" method = "POST">
+     <p><H1><strong>Mid Night / Day light Usage</strong></H1></p>
+    <p align="justify">Please Enter your mid night and day light usage in KW </p>
+    <p>&nbsp;</p>
+    <table class="table-responsive"  align="center">
+      <tr>
+        <td><div align="right"><strong>Monthly Mid Night Electricity  Usage KW: </strong></div></td>
+          <td><input type="input"  name="midnight" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" >Enter number only</td>
+          <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="right"><strong>During Day Electricity usage KW: </strong> </div></td>
+            <td><input type="input"   onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"           name="day" >Enter number only</td>
+          <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td></td>
+          <td><button type="submit" class="btn btn-info btn-block regular-link" name="doit" >Submit</button></td>
+          <td></td>
+      </tr>
+    </table>
+	<p>&nbsp;</p>
+ </form>
+</div>
+<footer class="footer">
+<div class="container">
+<div class="text-center"> 2020 Copyright &copy;  The Haris Eectrical AI </div>
+</div>
+</footer>	
+</div><script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
